@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 연동 유튜브 따라잡기</title>
+    <!--bootstrap cdn 연동-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- style, css 연동코드-->
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--이제 body 내부에서만 html 태그와 bootstrap 코드를 붙여넣어주면 됩니다. -->
+    <!-- 1. youtube 홈버튼 영역, 검색바 넣어주기 (bootstrap 참고), 로그인 버튼 넣어주기 (bootstrap 참고)-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <img src="./youtube logo.jpg" alt="Logo" width="40" height="30">
+    <button type="button" class="btn btn-light">Youtube</button>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">검색</button>
+    </form>
+    <!-- 2. 메뉴 버튼들 넣어주기 (bootstrap 참고)
+    혹은 <input type="button"> 사용해서 css 잡아줄 수도 있습니다 (학습장 2회차 수업 참조)
+    -->
+    <div class="button">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link 전체" aria-current="page" href="#">전체</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 음악" href="#">음악</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 게임" href="#">게임</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 믹스" href="#">믹스</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 실시간" href="#">실시간</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 애니메이션" href="#">애니메이션</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 만화 영화" href="#">만화 영화</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 액션 어드벤처 게임" href="#">액션 어드벤처 게임</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 요리" href="#">요리</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 최근에 업로드된 동영상" aria-current="page" href="#">최근에 업로드된 동영상</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 감상한 동영상" href="#">감상한 동영상</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link 새로운 맞춤 동영상" href="#">새로운 맞춤 동영상</a>
+            </li>
+        </ul>
+    </div>
+    <div class="button2">
+        <input type="button" value="홈"> <br>
+        <input type="button" value="Shorts"> <br>
+        <input type="button" value="구독">
+    <hr>
+        <input type="button" value="보관함"> <br>
+        <input type="button" value="시청기록">
+    <hr>
+        <input type="button" value="탐색">
+    </div>
+    <!--3.썸네일 영역 잡아주기 (div태그와 css 엮어서 만들거나, 표(table 사용),card 형식 bootstrap에서 사용)-->
+    <!--클릭 시 다른 페이지로 이동 되게끔! <a> 태그로 한번 감싸주세요. -->
+    <div class="img1">
+        <a href="https://www.youtube.com/watch?v=2kv-dxbSefA"><img src="./썸네일 1.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=4fjvy9u2FEA"><img src="./썸네일 2.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=huZ-8S1QQs0"><img src="./썸네일 3.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=I3VTLs4mvIc"><img src="./썸네일 4.jpg"></a>
+    </div>
+    <div class="img2">
+        <a href="https://www.youtube.com/watch?v=BiZGZ0CsuM0"><img src="./썸네일 5.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=t2Jv82PTqJg"><img src="./썸네일 6.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=TsiFS-D5sC4"><img src="./썸네일 7.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=RFzWPdnLPT4"><img src="./썸네일 8.jpg"></a>
+    </div>
+    <!--구분선 <hr> 넣어주기 -->
+    <hr>
+    <!-- 4. shorts 영역도 카드 혹은 div 태그로 박스 만들어서 넣어주기 / 힘들면 표로 넣어도 돼요-->
+    <div class="shorts">
+        <img src="./쇼츠.jpg">
+    </div>
+    <!--구분선 <hr> 넣어주기 -->
+    <hr>
+</body>
+</html>
